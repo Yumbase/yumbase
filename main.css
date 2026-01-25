@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background-color: #0D0D0D;
+    width: 100%;
+}
+
+/* Header full width (navbar edge-to-edge) */
+header.container {
+    max-width: 100%;       /* override 1100px */
+    width: 100%;           /* stretch full width */
+    padding: px 20px;    /* optional: small side padding */
+    box-sizing: border-box; /* padding included in width */
+}
+
+/* Hero section or other content stays constrained */
+.wrapper .container:not(header) {
+    max-width: 1100px;    /* keeps original container width for other sections */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Render-style navbar with comfortable spacing */
+header.container {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 22px;     /* 👈 tiny space from top */
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+header .logo img {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* Header layout: just use flex for vertical centering */
+header {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Logo stays left */
+header .logo {
+    margin-right: 20px; /* small space between logo and left nav */
+    padding-left: 35px;
+    font-size: 20px;
+    font-weight: 580;
+}
+
+/* Remove float/spacing from nav itself */
+header nav {
+    width: 100%; /* take full width */
+    position: relative; /* for floating children */
+}
+
+/* Float left nav-left near the logo */
+header nav ul.nav-left {
+    float: left;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    font-size: 17px;
+}
+
+
+
+/* Float right nav-right to the right */
+header nav ul.nav-right {
+    float: right;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+header {
+    width: 100%;
+    background-color: #000;
+    position: relative; /* needed for pseudo-element */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #FFF4DE; /* white line */
+}
+
+/* Make all nav links white */
+header nav ul li a {
+    color: #fff; /* white links */
+}
+
+/* Optional: keep hover effect for other links */
+header nav ul li:not(.active):not(.bth) a:hover {
+    border-bottom: 3px solid #FFF4DE;
+}
+
+/* Button style for "Online Store" */
+header nav ul li.bth a {
+    background: #FFF4DE; /* yellow background */
+    color: #000;         /* black text */
+    padding: 26px 30px;
+}
+
+/* Hover effect on the <a> itself */
+header nav ul li.bth a:hover {
+    background: #fff;       /* turns white on hover */
+    color: #000;            /* text remains black */
+    cursor: pointer;
+    transform: scale(1.05); /* slight enlargement */
+}
+
+
+.tag-bar-wrapper {
+  position: relative;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header.container {
+    background-color: #000;
+    color: #fff;
+    padding: 24px 0%; /* 20px from left and right */
+    box-sizing: border-box;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 500px;
+    padding-top: 100px;
+}
+
+.hero--info h1 {
+    font-size: 71px;
+    font-weight: 400;
+    margin-top: -18px;
+}
+
+.hero--info p {
+    font-weight: 250;
+    line-height: 170%;
+    margin: 20px 0;
+}
+
+.hero--info .btn {
+    display: inline-block;    
+    background: #FFF4DE;      /* original yellow */
+    padding: 24px 30px;
+    border: none;
+    font-size: 18px;
+    color: #000; 
+    font-size: 19px;   
+    margin-top: 20px;        /* black text on yellow */
+    transition: 0.2s ease;
+}
+
+.hero--info .btn:hover {
+    background: #fff;         /* turns white on hover */
+    color: #000;              /* keeps text black */
+    cursor: pointer;
+    transform: scale(1.08);   /* slight enlargement */
+}
+
+.hero img {
+    position: absolute;
+    top:  67px;
+    right: 0;
+}
+
+.offers {
+    padding: 200px 20px;
+    background-color: #0D0D0D;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.offers::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 910px; /* adjust freely */
+    width: 100%;
+    height: 1px;
+    background-color: #4A4740;
+}
+
+.offers::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 755px; /* adjust freely */
+    width: 100%;
+    height: 1px;
+    background-color: #4A4740;
+}
+
+
+.offers-divider-vertical {
+    position: absolute;
+    top: 608px;
+    left: 430px;
+    width: 1px;
+    height: 600px;
+    background-color: #4A4740;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    
+}
+
+
+.offers-divider-vertical.left {
+    left: 33%;
+    background: linear-gradient(
+        to bottom,
+        #4A4740 50%,               /* solid color at center */
+        rgba(74, 71, 64, 0) 100%   /* transparent at bottom */
+    );
+}
+
+.offers-divider-vertical.right {
+    left: 66%;
+    background: linear-gradient(
+        to bottom,
+        #4A4740 50%,
+        rgba(74, 71, 64, 0) 100%
+    );
+}
+
+
+.offers-line-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 154px;      /* 👈 adjust this */
+    width: 100%;
+    height: 1px;
+    background-color: #4A4740;
+}
+
+
+/* TITLE */
+.section-title {
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 120px;
+}
+
+/* GRID */
+.offers-grid {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+/* CARD */
+.offer-card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 0px;
+}
+
+/* TEXT */
+.offer-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.offer-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+
+/* IMAGE */
+.offer-card img {
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+
+
+
+
+.hero-section {
+    position: relative;   /* REQUIRED */
+    background: #0D0D0D;
+    min-height: 400px;    /* or whatever height you want */
+}
+
+
+/* Hero container */
+.hero-container {
+    display: flex;
+    max-width: 1440px;
+    width: 100%;
+    position: absolute;
+    right: 165px;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.hero-text {
+
+     background: linear-gradient(
+        to bottom,
+        rgba(9, 43, 91, 0) 0.05%,   /* transparent at 10% from top */
+        #092B5B 97%,              /* starts solid color at 40% */
+        #092B5B 100%              /* fully solid at bottom */
+    );
+    color: #fff;
+    padding: 100px 200px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    justify-content: center;
+    
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.hero-text p {
+    font-size: 17px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    line-height: 1.6;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    text-align: center;
+    background: #FFF4DE;
+    color: #000;
+    padding: 20px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Features section */
+.features {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #0D0D0D;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    
+}
+
+.feature-block {
+    flex: 1;
+    padding: 40px;
+    border-right: 1px solid #222;
+    color: #fff;
+}
+
+.feature-block:last-child {
+    border-right: none;
+}
+
+.feature-block h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.feature-block p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* SECTION */
+.quote-section {
+    position: relative;
+    min-height: 420px;
+    background: #0D0D0D;
+    padding: 120px 80px;
+    overflow: hidden;
+}
+
+/* BACKGROUNDS */
+.bg-left {
+    position: absolute;
+    left: -120px;
+    top: 290px;                 /* 👈 moved DOWN */
+    width: 420px;
+    opacity: 0.85;
+    z-index: 1;
+}
+
+.bg-right {
+    position: absolute;
+    right: -120px;
+    top: -70px;                 /* 👈 moved UP */
+    width: 420px;
+    opacity: 0.7;
+    z-index: 0;                 /* 👈 behind everything */
+}
+
+.quote-box {
+    position: relative;
+    max-width: 760px;
+    padding: 40px 50px;
+    border: 1px solid #FFF4DE;
+    margin-left: 70px;
+    
+    /* 👇 NEW */
+    background: rgba(0, 0, 0, 0.65);   /* soft black */
+    backdrop-filter: blur(6px);        /* glass effect */
+    
+    z-index: 3;
+}
+
+.quote-box p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.quote-box span {
+    font-size: 17px;
+    font-style: italic;
+    color: #ccc;
+}
+
+
+.discord-wrapper {
+    position: absolute;
+    right: 170px;
+    top: 57%;
+    transform: translateY(-50%);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discord-float {
+    width: 300px;
+    margin-bottom: 14px; /* space before icons */
+}
+
+.discord-socials {
+    display: flex;
+    gap: 5px;
+
+     /* Move container slightly */
+    position: relative;
+    top: -20px;   /* move up */
+    left: 51px;   /* move right */
+}
+
+.discord-socials img {
+    width: 70px;
+    height: 70px;
+
+    /* 🔥 THIS is the fix */
+    object-fit: contain;
+    padding: 6px;                 /* equal visual weight */
+    box-sizing: border-box;
+
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.discord-socials img:hover {
+    transform: scale(1.15);
+}
+
+.discord-socials img[alt="Instagram"] {
+    width: 60px;
+    height: 60px;
+}
+
+
+.newsletter {
+    position: absolute;
+    right: 165px;
+    top: 465%;
+    transform: translateY(-50%);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #F3F4F6, #e0d7ff);
+    border-radius: 12px;
+    padding: 40px;
+    gap: 30px;
+
+
+}
+
+
+.newsletter-info {
+    flex: 1;
+}
+
+.newsletter-info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.newsletter-info p {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 30px;
+}
+
+.newsletter-note {
+    color: #444;          /* slightly blacker */
+    font-size: 13px;
+    display: block;
+    margin-top: 15px;
+}
+
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 200px;
+    cursor: pointer;
+      /* snappy timing function */
+    transition: border-color 0.15s linear
+}
+
+.newsletter-form input[type="email"]:focus {
+    outline: none;
+    border-color: #8B5CF6;
+    box-shadow: 0 0 6px rgba(139, 92, 246, 0.4);
+    transition: 0.2s linear;
+}
+
+
+.newsletter-form button {
+    padding: 12px 24px;
+    background-color: #8B5CF6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #5a3aff;
+}
+
+.closing-quote {
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 100px;
+}
+
+.closing-quote p {
+    font-size: 16px;
+    font-weight: 400;
+    color: transparent;
+}
