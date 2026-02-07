@@ -25,12 +25,13 @@
   font-weight: 600; /* slightly lighter than bold */
   text-align: center;
 
-  /* Brighter neon green gradient fading to transparent at bottom */
+   /* Mostly solid #FFF4DE with very slight fade at the bottom */
   background: linear-gradient(
     to bottom,
-    #15ff53 28%,           /* bright neon green at top */
-    rgba(46, 255, 102, 0.6) 90%, /* semi-transparent in middle */
-    rgba(0, 255, 68, 0) 101%    /* fully transparent at bottom */
+    #fff7e8 40%,              /* fully solid */
+    #fff5e2 90%,             /* still solid almost all the way */
+    rgba(255, 246, 228, 0.9) 55%,  /* tiny fade starts here */
+    rgba(255, 246, 228, 0.85) 100% /* very subtle disappearing at bottom */
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -291,5 +292,6 @@ function filterByTag(tag) {
 
 </body>
 </html>
+
 
 
