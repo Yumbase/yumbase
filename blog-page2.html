@@ -73,21 +73,27 @@
       color: #f0f0f0;
     }
 
-    a.back {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #00ff44;
-      color: #000;
-      font-weight: bold;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+     a.back {
+  display: inline-block;
+  margin-top: 52px;
+  padding: 10px 22px;
 
-    a.back:hover {
-      background-color: #00dd33;
-    }
+  background-color: #1f1f1f;   /* dark gray */
+  color: #eaeaea;              /* soft white */
+
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+}
+
+a.back:hover {
+  background-color: #2a2a2a;   /* slightly lighter gray */
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
   </style>
 </head>
 <body>
@@ -140,3 +146,4 @@
 
 </body>
 </html>
+
